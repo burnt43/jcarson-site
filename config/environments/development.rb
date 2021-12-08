@@ -67,10 +67,15 @@ Rails.application.configure do
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
-  # Use an evented file watcher to asynchronously detect changes in source code,
-  # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  # JCARSON: I'm disabling tis file_watcher. It depends on a gem called 'listen'.
+  #   I'm trying to run this application as LIGHT as possible. I do not want to
+  #   use the 'listen' gem.
+  # REVIEW: I might be able to change the file_watcher to something else.
+  # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # JCARSON: Allow requests to my own hostname!
+  config.hosts << 'jamescarson.ninja'
 end
