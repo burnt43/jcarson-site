@@ -129,6 +129,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.4.2)
     thor (1.1.0)
     tilt (2.0.10)
     tzinfo (2.0.4)
@@ -144,6 +145,7 @@ PLATFORMS
 DEPENDENCIES
   rails (~> 6.1.4)
   sass-rails (>= 6)
+  sqlite3 (~> 1.4)
 
 RUBY VERSION
    ruby 3.0.1p64
